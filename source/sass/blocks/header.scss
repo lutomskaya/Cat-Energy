@@ -1,0 +1,23 @@
+.header {
+  padding: 50px 0;
+  z-index: 1;
+  background-image: linear-gradient(to right, $color-default-white 50%, rgba($color-apple, 0.85) 50%);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 110px;
+  }
+
+  &__logo {
+    color: $color-default-white;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+
+    @include active {
+      opacity: 0.6;
+    }
+  }
+}

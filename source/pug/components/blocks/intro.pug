@@ -1,0 +1,9 @@
+mixin intro()
+  section.intro.container
+    h1 Функциональное питание для котов
+    p Занялся собой? Займись котом!
+    button(type="button", aria-label="Кнопка для подбора программы", aria-pressed="false") Подобрать программу
+    .intro__background 
+      +img("content", "index-background-desktop", "png", 720, 700, "Product")
+    .intro__product 
+      +img("content", "product", "png", 552, 499, "Product")

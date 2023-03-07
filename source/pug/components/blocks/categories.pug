@@ -1,0 +1,25 @@
+mixin categories()
+  -
+    const list = [
+      {
+        title: "похудение",
+        description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
+        button: "каталог slim"
+      },
+
+      {
+        title: "набор массы",
+        description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
+        button: "каталог pro"
+      }
+    ] 
+  section.categories.container
+    h1.visually-hidden Категории
+    ul.categories__list
+      each value in list
+        li.categories__item
+          h2!=value.title
+          p!=value.description
+          a(href="#", aria-label="Кнопка для подбора программы", aria-pressed="false")!=value.button
+            +icon("arrow", 32, 10)
+          
